@@ -1,6 +1,6 @@
 .wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   border-radius: 9px;
   background: #FFF;
   box-shadow: 5px 6px 16px 0px rgba(42, 42, 42, 0.16);
@@ -8,15 +8,20 @@
 
 .link {
   display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
 }
 
 .img {
   width: 200px;
   height: 200px;
+  margin: 0 auto;
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
@@ -34,4 +39,8 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+}
+
+.active {
+  border: 1px solid red;
 }
