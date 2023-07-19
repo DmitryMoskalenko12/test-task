@@ -1,8 +1,11 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
+  height: 80vh;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
+  padding: 0;
   /* display: grid;
   grid-template-columns: repeat(5, 19%);
   grid-template-rows: 100vh;

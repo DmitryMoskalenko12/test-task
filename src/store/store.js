@@ -10,6 +10,7 @@ export const useRecipes = create((set, get) => ({
   limit: 25,
   leftOffset: 0,
   rightOffset: 5,
+  deleteItemsAll: [],
   page: 1,
   fetchRecipes: async (page = 1) => {
 
@@ -43,7 +44,8 @@ export const useRecipes = create((set, get) => ({
     const getAllRecipes = state.recipes;
     const selectedRecipes = state.selectedRecipes;
     const forRender = getAllRecipes.filter(item => !selectedRecipes.includes(item))
-    return {recipes: forRender, selectedRecipes: []}
+    const deleteItems = getAllRecipes.filter(item => selectedRecipes.includes(item))
+    return {recipes: forRender, selectedRecipes: [], deleteItemsAll: [...get().deleteItemsAll, ...deleteItems]}
   }),
   setPage: () => {
     set({page: get().page + 1})
@@ -57,12 +59,15 @@ export const useRecipes = create((set, get) => ({
   setRightOffset: () => {
     set({rightOffset: get().rightOffset + 5 })
   },
-  resetLeftOffset: () => {
-    set({leftOffset: -5 })
+  resetLeftOffset: (dec) => {
+    set({leftOffset: -5 - dec })
   },
-  resetRightOffset: () => {
-    set({rightOffset: 0 })
+  resetRightOffset: (dec) => {
+    set({rightOffset: 0 - dec })
   },
+  resetItemsAll: () => {
+    set({deleteItemsAll: []})
+  }
 
   
 }))
