@@ -9,7 +9,7 @@ export const useRecipes = create((set, get) => ({
   proccess: 'idle',
   limit: 25,
   leftOffset: 0,
-  rightOffset: 5,
+  rightOffset: 15,
   deleteItemsAll: [],
   page: 1,
   fetchRecipes: async (page = 1) => {
@@ -63,10 +63,13 @@ export const useRecipes = create((set, get) => ({
     set({leftOffset: -5 - dec })
   },
   resetRightOffset: (dec) => {
-    set({rightOffset: 0 - dec })
+    set({rightOffset:  dec /* - -5  */})
   },
   resetItemsAll: () => {
     set({deleteItemsAll: []})
+  },
+  resetSelectedRecipes: () => {
+    set({selectedRecipes: []})
   }
 
   

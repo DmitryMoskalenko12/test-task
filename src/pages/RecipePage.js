@@ -12,7 +12,6 @@ const RecipePage = () => {
     fetchRecipe(id)
   }, [id])
 
-  
   return (
     <div className={style.wrapper}>
     {
@@ -41,7 +40,7 @@ const RecipePage = () => {
       return <Fragment key={id}>
         <Link to = {'/'}>Back</Link>
         <div className={style.img}>
-        <img src={image_url} alt='You will see bootle of beer' />
+          <img src={image_url} alt='You will see a bottle of beer' width={300} height={450}/>
         </div>
         <h2 className={style.name}>{name}</h2>
         <p className={style.tagline}>Tagline: <span>{tagline}</span></p>

@@ -1,12 +1,5 @@
 .wrapper {
-  display: flex;
-  height: 80vh;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(5, 19%);
   grid-template-rows: 100vh;
   grid-auto-rows: 100vh;
@@ -14,5 +7,12 @@
   padding: 0;
   list-style-type: none;
   justify-content: center;
-  margin: 0; */
+  margin: 0;
+}
+
+.proccess {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

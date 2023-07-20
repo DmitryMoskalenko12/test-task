@@ -11,10 +11,9 @@ const RecipesCard = (props) => {
   const [active, setActive] = useState();
 
   const onHandleRightButton = (e, id) => {
-   
-      e.preventDefault();
-     
-       toggleSelectedRecipe(id)
+  
+   e.preventDefault();
+   toggleSelectedRecipe(id)
    
    const recipe = res.find(item => item.id === id);
    setActive(!recipe ? style.active : '');
@@ -25,9 +24,8 @@ const RecipesCard = (props) => {
     <li className={`${style.wrapper} ${active}`} onContextMenu={(e) => onHandleRightButton(e, id)}>
       <Link className={style.link} to={`/detail/${id}`}>
         <div className={style.img}>
-          <img src={image} alt="You will see beer recipe" />
+          <img src={image} alt="You will a bottle of beer" width={200} height={300}/>
         </div>
-
         <p className={style.name}>{name}</p>
         <p className={style.descr}>{description}</p>
       </Link>
