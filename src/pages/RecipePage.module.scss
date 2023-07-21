@@ -1,18 +1,27 @@
 .wrapper {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
+  grid-auto-rows: 100%;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 15px grey;
-  border-radius: 10px;
-  padding: 10px;
 }
 
-.name {
-  margin-bottom: 10px;
+.link {
+ position: fixed;
+ top: 50%;
+ left: 10px;
+ text-decoration: none;
+ color: black;
+ font-size: 45px;
+ font-weight: 900;
+}
+
+.title {
+  margin: 0;
+  margin-top: 5px;
 }
 
 .img {
@@ -30,15 +39,26 @@
   text-align: center;
 }
 
-.ingridients {
-  text-align: center;
-  font-weight: 700;
-  font-size: 16px;
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  > li {
+    margin-top: 5px;
+  }
 }
 
-.method {
+.margin {
+ margin-top: 5px;
+}
+
+.ingridients {
+  text-align: center;
+}
+
+.subtitle {
   text-align: center;
   font-weight: 700;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-top: 5px;
 }

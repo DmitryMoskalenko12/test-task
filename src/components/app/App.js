@@ -5,15 +5,14 @@ import Page404 from '../../pages/Page404';
 import RecipePage from '../../pages/RecipePage';
 
 function App() {
- 
   return (
-   <Router>
-    <Routes>
-      <Route path='/' element={<MainPage/>}/>
-      <Route path = '/detail/:id' element = {<RecipePage/>}/>
-      <Route path='*' element={<Page404/>}/>
-    </Routes>
-   </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/detail/:id" element={<RecipePage />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
+    </Router>
   );
 }
 

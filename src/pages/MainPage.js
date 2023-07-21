@@ -1,11 +1,11 @@
-import RecipesList from "../components/recipesList/RecipesList";
+import RecipesList from '../components/recipesList/RecipesList';
 
 const MainPage = () => {
   return (
     <>
-    <RecipesList/>
+      <RecipesList />
     </>
-  )
-}
+  );
+};
 
 export default MainPage;
